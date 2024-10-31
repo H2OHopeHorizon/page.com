@@ -225,39 +225,75 @@ header p {
             background-color: #ffae42;
         }
 
-        .video-section {
-            margin: 40px 0;
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-            text-align: center;
-        }
+       /* Video Demonstration Section */
+#video-demonstration {
+    padding: 50px;
+    background-color: #f4f7f9; /* Light background */
+}
 
-        .video-section h2 {
-            margin-bottom: 20px;
-            font-size: 2.5em;
-            color: #fff;
-        }
+#video-demonstration h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #004080; /* Dark blue for heading */
+}
 
-        .video-wrapper {
-            position: relative;
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-            height: 0;
-            overflow: hidden;
-            max-width: 100%;
-            background: #000;
-            border-radius: 10px;
-            margin: auto;
-        }
+#video-demonstration .projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
 
-        .video-wrapper iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
+#video-demonstration .project {
+    background-color: #ffffff; /* White background */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    flex-basis: calc(50% - 20px); /* Two videos per row */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#video-demonstration h3 {
+    margin: 15px 0 10px;
+    font-size: 1.5em;
+    color: #007bff; /* Blue for subheadings */
+    text-align: center;
+}
+
+#video-demonstration .video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    background: #000;
+}
+
+#video-demonstration .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    #video-demonstration .project {
+        flex-basis: 100%; /* Stack videos on smaller screens */
+    }
+}
+/* General Section Styling */
+#certifications {
+    padding: 40px;
+    background-color: #f8f9fa;
+    margin: 20px 0;
+    border-radius: 10px;
+    border-left: 5px solid #007bff; /* Blue accent on the left */
+}
         .contact-form {
     margin-top: 20px;
     padding: 20px;
@@ -477,7 +513,7 @@ footer p {
                         <div class="image-overlay">
                             <h3>Nimako Stephen</h3>
                             <p>Organizer</p>
-                            <p>Universiy of Cape Coast</p>
+                            <p>Konongo Odumase SHS</p>
                         </div>
                     </div>
         
@@ -500,14 +536,39 @@ footer p {
                     </div>
         
                     <div class="image-card">
-                        <img src="https://i.imgur.com/y4IF4ga.jpeg" alt="Team Members">
+                        <img src="https://i.imgur.com/wAfIAOS.jpeg" alt="Team Members">
                         <div class="image-overlay">
-                            <h3>Team Members</h3>
-                            <p>Volunteer</p>
-                            <p>Organisation</p>
+                            <h3>Health Educator</h3>
+                            <p>Catherine</p>
+                            <p>Aggrey Memorial SHS</p>
                         </div>
                     </div>
-                </section>
+                
+                <div class="image-card">
+                    <img src="https://i.imgur.com/rddpb5l.jpeg" alt="Team Members">
+                    <div class="image-overlay">
+                        <h3>Advisor</h3>
+                        <p>Mr. Prince</p>
+                        <p>KNUST</p>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <img src="https://i.imgur.com/dLcVSCn.jpg" alt="Team Members">
+                    <div class="image-overlay">
+                        <h3>Financial</h3>
+                        <p>Frederick Amponsah</p>
+                        <p>University Of Education</p>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <img src="https://i.imgur.com/fww4WEv.jpeg" alt="Team Members">
+                    <div class="image-overlay">
+                        <h3>Volunteer Coordinator</h3>
+                        <p>Nicolina Bonsu</p>
+                        <p>St. Louis SHS</p>
+                    </div>
+                </div>
+            </section>
         
                 <section class="testimonial-section">
                     <h2>What People Say About Us</h2>
@@ -531,36 +592,42 @@ footer p {
                     <button class="donate-button" onclick="alert('Please send your donation via Mobile Money to +233551560593')">Donate Now</button>
                 </section>
         
-                <section class="video-section">
-                    <h2>Our Project in Sabinom Village</h2>
-                    <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/60Big9Ut6Mc?si=sNUacAZ8Fs4FiQ7t" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
+                    <section id="video-demonstration">
+                    <h2>Video Demonstration</h2>
+                    <div class="projects-container">
+                        <div class="project">
+                            <h3>OUR PROJECT AT SABINOM VILLAGE</h3>
+                            <div class="video-container">
+                                <div style="padding:56.25% 0 0 0;position:relative;">
+                                    <iframe src="https://player.vimeo.com/video/1024181835?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture"
+                                    frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" 
+                                    style="position:absolute;top:0;left:0;width:100%;height:100%;" title="ALGFRED"></iframe>
+                                </div>
+                            </div>
+                        </div>
                 </section>
-                <section class="contact">
-                    <h2>Become a volunteer</h2>
-                    <div class="contact-form">
-                        <h2>Lets Volunteer</h2>
-                        <form action="mailto:H20HopeHorizon@gmail.com" method="post" enctype="text/plain">
-                            <label for="name">Name:</label>
-                            <input type="text" id="name" name="name" required>
-                            
-                            <label for="email">Email:</label>
-                            <input type="email" id="email" name="email" required>
-                            
-                            <label for="message">Why do u want to volunteer:</label>
-                            <textarea id="message" name="message" rows="6" required></textarea>
-                            
-                            <button type="submit">Send Message</button>
-                        </form>
-                    </div>
-                </section>
+                
                 
         
                 <section class="images-section">
                     <h2>Children from Sabinom Village</h2>
                     <div class="image-card">
                         <img src="https://i.imgur.com/BQnSkSB.jpeg" alt="Children from Sabinom Village">
+                    </div>
+                </section>
+                <section class="images-section">
+                    <div class="image-card">
+                        <img src="https://i.imgur.com/XXLvfzc.jpeg" alt="Children from Sabinom Village">
+                    </div>
+                </section>
+                <section class="images-section">
+                    <div class="image-card">
+                        <img src="https://i.imgur.com/ujNM8Rh.jpeg" alt="Children from Sabinom Village">
+                    </div>
+                </section>
+                <section class="images-section">
+                    <div class="image-card">
+                        <img src="https://i.imgur.com/M2KAuT3.jpeg" alt="Children from Sabinom Village">
                     </div>
                 </section>
             </div>
@@ -581,6 +648,24 @@ footer p {
                     <button type="submit" class="volunteer-button">Submit</button>
                 </form>
             </section>
+            <section class="contact">
+                <h2>Contact Us</h2>
+                <div class="contact-form">
+                    <h2>Get in Touch</h2>
+                    <form action="mailto:H20HopeHorizon@gmail.com" method="post" enctype="text/plain">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                        
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                        
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+                        
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+            </section>
             
             <footer>
                 <div class="social-media-ctas">
@@ -595,7 +680,7 @@ footer p {
                     </a>
                 </div>
                 <p>&copy; 2024 H20HopeHorizon. All rights reserved.</p>
-                <p>Designed by Cephas Osei-Bonsu.</p>
+                <p>Designed by Cephas.</p>
             </footer>
             
         
